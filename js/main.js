@@ -105,7 +105,7 @@ $.ajax({
     jsonpCallback: 'cbfunc',
     success: function(data){
         var json_data = data.query.results.item,
-            no_items= 1;
+            no_items= 20;
         for (var i = 0; i < no_items; i++) {
             redirect = [];
             if (current_source == 'yahoo') {
@@ -118,7 +118,7 @@ $.ajax({
             }
             if (current_source == 'nytimes') {
                 source = 'NEW YORK TIMES';
-                link = json_data[i].guid;
+                link = json_data[i].guid.content;
             }
             if (current_source == 'rt') {
                 source = 'RUSSIA TODAY';
@@ -133,6 +133,7 @@ $.ajax({
         }
         redirect = [];
         source = link = '';
+        console.log(json_data);
     }
 })
 }
