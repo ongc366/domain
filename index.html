@@ -15,20 +15,20 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body class="bg-black">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="content wrapper">
-            <h1><scpan class="news_source">&#8230;</scpan></h1>
-            <h1><a target="_blank" class="name">&#8230;</a></h1>
-            <h1><scpan class="date">&#8230;</scpan></h1>
+        <div class="content wrapper absolute">
+            <h1><scpan class="news_source">...</scpan></h1>
+            <h1><a target="_blank" class="title">...</a></h1>
+            <h1><scpan class="date">...</scpan></h1>
         </div>
-        <h1><scpan class="logo">&#8631;</scpan></h1>
-        <div class="white_screen wrapper"></div>
-        <div class="loading wrapper"><h1>Loading</h1></div>
+        <h1><scpan class="logo fixed bg-black">&#8631;</scpan></h1>
+        <div class="white_screen wrapper absolute bg-white"></div>
+        <div class="loading_screen wrapper fixed bg-black"><h1>Loading</h1></div>
         
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

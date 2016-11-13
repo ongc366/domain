@@ -103,12 +103,20 @@ textarea {
 
 body {
     position: relative;
-    background: black;
     font-size: 0;
+    font-family: helvetica, sans-serif;
     color: white;
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
+.fixed { position: fixed; }
+
+.absolute { position: absolute; }
+
+.bg-black { background-color: black; }
+
+.bg-white { background-color: white; }
 
 a, 
 a:visited, 
@@ -116,6 +124,16 @@ a:hover {
     color: white; 
     text-decoration: none; 
 }
+
+a, 
+scpan,
+.loading_screen h1 { 
+    padding: 5.5px; 
+    border: solid 1px white; 
+}
+
+a,
+scpan:not(.logo) { margin-left: -2px; }
 
 body, 
 .wrapper {
@@ -125,63 +143,22 @@ body,
 
 h1 {
     margin: 0;
-    font-family: helvetica, sans-serif;
     font-size: 48px;
     font-weight: lighter;
     display: inline-block;
+    text-transform: uppercase;
 }
 
 .content {
     padding: 12px;
-    position: absolute;
     top: 93px;
     margin-left: 2px;
-    width: 100%;
-}
-
-.logo {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    background-color: black;
 }
 
 .logo,
-.name,
-.news_source,
-.date,
-.archive { 
-    padding: 5.5px; 
-    border: solid 1px white; 
-}
+.loading_screen h1 { margin: 12px; }
 
-.news_source,
-.name,
-.date {
-    margin-left: -2px;
-}
-
-.white_screen {
-    position: absolute;
-    background-color: white;
-    top: 100%;
-}
-
-.loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: black;
-    z-index: 1;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.loading h1 {
-    margin: 12px;
-    padding: 6px;
-    border: solid 1px white;
-}
+.white_screen { top: 100%; }
 
 /* ==========================================================================
    Helper classes
@@ -295,12 +272,12 @@ h1 {
 
     a,
     a:visited {
-        text-decoration: underline;
+        text-decoration: none;
     }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+    /*a[href]:after {*/
+    /*    content: " (" attr(href) ")";*/
+    /*}*/
 
     abbr[title]:after {
         content: " (" attr(title) ")";
@@ -350,5 +327,9 @@ h1 {
     h2,
     h3 {
         page-break-after: avoid;
+    }
+    
+    h1 {
+        display: inline-block;
     }
 }
